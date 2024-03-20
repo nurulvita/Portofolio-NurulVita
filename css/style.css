@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --footer : linear-gradient(to top, #7e7fd8, #589dda);
+    --warna1: #fffffe;
+    --warna2: #a7a9be;
+    --warna3: black;
+}
+
+body {
+  background: linear-gradient(#000, #7e7fd8, #589dda);
+}
+
+label {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+body.active {
+    background: #f8f8f8;
+}
+
+
+.beranda {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 50px 10% 0;
+}
+
+.konten_beranda {
+  max-width: 900px;
+  position: relative;
+  object-fit: contain;
+}
+
+.konten_beranda img {
+  width: 700px;
+  position: absolute;
+  top: -200px;
+  left: 550px;
+  opacity: 0;
+  animation: geserKiri 1s ease forwards;
+  animation-delay: 2.5s;
+  object-fit: contain;
+}
+
+.konten_beranda h3 {
+  font-size: 35px;
+  font-weight: 700;
+  opacity: 0;
+  animation: geserBawah 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.konten_beranda h3 span {
+  color: var(--warna2);
+  font-weight: 700;
+}
+
+.konten_beranda h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  animation: geserAtas 1s ease forwards;
+  animation-delay: .7s;
+}
+
+/*--------------------------------------------------------------
+
+/*---------------- SOCIAL MEDIA ----------*/
+.beranda_sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 2px solid var(--warna1);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--warna1);
+  text-decoration: none;
+  margin: 30px 10px 30px 0;
+  transition: .5s ease;
+  opacity: 0;
+  animation: geserKiri 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.beranda_sci a:hover {
+  background: var(--warna1);
+  color: var(--warna3);
+  box-shadow: 0 0 20px var(--warna2);
+}
+
+.aboutme {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-radius: 20px;
+  border-right: 10px;
+  transition: background .5s, transform .5s;
+  box-shadow: 1px 1px 20px var(--warna3), 1px 1px 30px var(--warna2);
+}
+/* ----------------------------------------- */
+
+
+#toggle {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    border-radius: 160px;
+    background: #222;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 1),
+                inset 0 8px 8px rgba(0, 0, 0, 1),
+                inset 0 -4px 4px rgba(0, 0, 0, 1);
+}
+
+#toggle.active {
+    background: white;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 1),
+                inset 0 2px 8px rgba(0, 0, 0, 1),
+                inset 0 -4px 4px rgba(0, 0, 0, 05),
+}
+
+#toggle .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #3e3f40, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 1),
+                inset 0 4px 4px rgb(64, 60, 60),
+                inset 0 -4px 4px rgb(64, 60, 60);
+    transition: 0.5s;
+}
+
+#toggle.active .indicator {
+    left: 160px;
+    background: linear-gradient(to bottom, #ffffff, #222);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1),
+                inset 0 4px 4px rgb(255, 251, 251),
+                inset 0 -4px 4px rgb(255, 255, 255);
+}
+
+
+/* ========== BAGIAN PENDIDIKAN ========== */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.background {
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(27, 231, 231, 0.442);
+}
+
+.date {
+  font-style: italic;
+  color: #8baeb3;
+  text-align: left;
+}
+
+.pendidikan {
+  color: var(--warna1);
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 10rem;
+}
+
+.sub_judul {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+
+.sub_judul span {
+  color: #97e2ff;
+}
+
+.wadah {
+  padding: 30px;
+}
+
+.daftar_Pendidikan {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 600px));
+  grid-gap: 40px;
+}
+
+.daftar_Pendidikan div {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-radius: 20px;
+  border-right: 10px;
+  transition: background .5s, transform .5s;
+  box-shadow: 1px 1px 20px var(--warna1), 1px 1px 30px var(--warna2);
+}
+
+.daftar_Pendidikan i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.daftar_Pendidikan div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.daftar_Pendidikan div a {
+  text-decoration: none;
+  color: var(--warna2);
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+
+.daftar_Pendidikan div:hover {
+  transform: translateY(-10px);
+}
+
+/* ------------------- */
+
+/* ========== BAGIAN PROJEK ========== */
+.teks_utama {
+  background-color: linear-gradient(to right, #54369f , #060e64);
+  padding-top: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+
+.teks_utama h2 {
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+}
+
+.teks_utama h2 span {
+  color: var(--warna2);
+}
+
+.konten_projek {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(30px, auto));
+  gap: 10px;
+  margin: 30px 30px;
+}
+
+.baris {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.baris img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform .5s;
+}
+
+.lapisan {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.627), #fffffe);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height .5s;
+}
+
+.lapisan h5 {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.lapisan p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.lapisan a {
+  text-decoration: none;
+}
+
+.lapisan i {
+  color: #ff004f;
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--warna2);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.baris:hover img {
+  transform: scale(1.1);
+}
+
+.baris:hover .lapisan {
+  height: 100%;
+}
+
+/* ========== BAGIAN PROJEK ========== */
+
+.services .icon-box {
+  padding: 20px 15px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+.services .icon-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: ease-in-out 0.3s;
+  z-index: -1;
+}
+
+.services .icon-box:hover::before {
+  background: #308ad4;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.services .icon {
+  margin: 0 auto 30px auto;
+  padding-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #306cd4;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
+}
+
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #111;
+}
+
+.services .description {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover .title a,
+.services .icon-box:hover .description {
+  color: #fff;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #30d4be;
+}
+
+@media (max-width: 768px) {
+  .services .icon-box::before {
+    bottom: 60%;
+  }
+}
+/* ------------------------------- */
+
+/*------ footer ------*/
+
+footer {
+    padding: 2rem 0;
+    background: var(--footer);
+    text-align: center;
+  }
+  
+  .footer-icons {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-icons a {
+    margin: 0 0.5rem;
+  }
+  
+  .footer-icons svg {
+    fill: #3e3f40;
+  }
+  
+  .footer-icons a:hover svg {
+    fill: #000;
+  }
+  /* --------------------- */
+
+  @keyframes geserKiri {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media (width < 960px){
+  .daftar_Pendidikan {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 600px));
+    grid-gap: 40px;
+  } 
+}
+
+@media (width < 960px) {
+  .konten_projek {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(30px, auto));
+    gap: 10px;
+    margin: 30px 30px;
+  }
+}
