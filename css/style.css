@@ -7,10 +7,20 @@
     --warna2: #a7a9be;
     --warna3: black;
 }
-
-body {
+/* body {
   background: linear-gradient(#000, #7e7fd8, #589dda);
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.dark-mode body {
+  background-color: #222;
+  color: #fff;
+} */
+
+/* body {
+  background: linear-gradient(#000, #7e7fd8, #589dda);
+} */
 
 label {
   color: white;
@@ -20,9 +30,9 @@ h1 {
   color: white;
 }
 
-body.active {
+/* body.active {
     background: #f8f8f8;
-}
+} */
 
 .aboutme {
   background-color: transparent;
@@ -33,51 +43,6 @@ body.active {
   border-right: 10px;
   transition: background .5s, transform .5s;
   box-shadow: 1px 1px 20px var(--warna3), 1px 1px 30px var(--warna2);
-}
-
-.beranda {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  padding: 50px 10% 0;
-}
-
-.konten_beranda {
-  max-width: 900px;
-  position: relative;
-  object-fit: contain;
-}
-
-.konten_beranda img {
-  width: 700px;
-  position: absolute;
-  top: -200px;
-  left: 550px;
-  opacity: 0;
-  animation: geserKiri 1s ease forwards;
-  animation-delay: 2.5s;
-  object-fit: contain;
-}
-
-.konten_beranda h3 {
-  font-size: 35px;
-  font-weight: 700;
-  opacity: 0;
-  animation: geserBawah 1s ease forwards;
-  animation-delay: .7s;
-}
-
-.konten_beranda h3 span {
-  color: var(--warna2);
-  font-weight: 700;
-}
-
-.konten_beranda h3:nth-of-type(2) {
-  margin-bottom: 30px;
-  animation: geserAtas 1s ease forwards;
-  animation-delay: .7s;
 }
 
 /*--------------------------------------------------------------
@@ -306,6 +271,7 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   text-align: center;
+  color: black;
   z-index: 1;
 }
 
