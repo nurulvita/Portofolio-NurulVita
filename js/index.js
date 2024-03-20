@@ -49,10 +49,9 @@ function submitForm() {
     newData.push(newEntry);
 
     localStorage.setItem('data', JSON.stringify(newData));
+    alert('Pertanyaan ' + newEntry.text + ' berhasil masuk. Terimakasih..');
 
     hasil.innerHTML += `${newEntry.email}: ${newEntry.text},`;
-    
-    alert('Pertanyaan ' + newEntry.text + ' berhasil masuk. Terimakasih..');
     
     emailInput.value = '';
     textInput.value = '';
