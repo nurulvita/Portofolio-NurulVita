@@ -9,7 +9,7 @@ const submit = document.querySelector('#submit');
 const hasil = document.querySelector('#hasil');
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Menghentikan form untuk disubmit secara default
+    event.preventDefault();
     
     if (!validateEmail(email.value)) {
         alert('Alamat email tidak valid');
@@ -22,7 +22,7 @@ form.addEventListener('submit', function(event) {
 });
 
 function validateEmail(email) {
-    // Menggunakan regular expression untuk validasi email
+
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
@@ -59,24 +59,4 @@ function submitForm() {
     phoneInput.value = '';
 }
 
-
-
 // ----------------- END FORM ---------------------------
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    var navbar = document.getElementById("navbar");
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        navbar.classList.remove("bg-dark");
-        navbar.classList.remove("navbar-dark");
-        navbar.classList.add("navbar-light");
-        navbar.classList.add("bg-light");
-    } else {
-        navbar.classList.remove("navbar-light");
-        navbar.classList.remove("bg-light");
-        navbar.classList.add("bg-dark");
-        navbar.classList.add("navbar-dark");
-    }
-
-  }

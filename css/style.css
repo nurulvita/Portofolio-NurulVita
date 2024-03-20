@@ -24,6 +24,16 @@ body.active {
     background: #f8f8f8;
 }
 
+.aboutme {
+  background-color: transparent;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 13px;
+  border-radius: 20px;
+  border-right: 10px;
+  transition: background .5s, transform .5s;
+  box-shadow: 1px 1px 20px var(--warna3), 1px 1px 30px var(--warna2);
+}
 
 .beranda {
   position: relative;
@@ -98,62 +108,8 @@ body.active {
   box-shadow: 0 0 20px var(--warna2);
 }
 
-.aboutme {
-  background-color: transparent;
-  padding: 40px;
-  font-size: 13px;
-  font-weight: 13px;
-  border-radius: 20px;
-  border-right: 10px;
-  transition: background .5s, transform .5s;
-  box-shadow: 1px 1px 20px var(--warna3), 1px 1px 30px var(--warna2);
-}
+
 /* ----------------------------------------- */
-
-
-#toggle {
-    position: relative;
-    display: block;
-    width: 100px;
-    height: 60px;
-    border-radius: 160px;
-    background: #222;
-    transition: 0.5s;
-    cursor: pointer;
-    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 1),
-                inset 0 8px 8px rgba(0, 0, 0, 1),
-                inset 0 -4px 4px rgba(0, 0, 0, 1);
-}
-
-#toggle.active {
-    background: white;
-    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 1),
-                inset 0 2px 8px rgba(0, 0, 0, 1),
-                inset 0 -4px 4px rgba(0, 0, 0, 05),
-}
-
-#toggle .indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to bottom, #3e3f40, #222);
-    border-radius: 50%;
-    transform: scale(0.9);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 1),
-                inset 0 4px 4px rgb(64, 60, 60),
-                inset 0 -4px 4px rgb(64, 60, 60);
-    transition: 0.5s;
-}
-
-#toggle.active .indicator {
-    left: 160px;
-    background: linear-gradient(to bottom, #ffffff, #222);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 1),
-                inset 0 4px 4px rgb(255, 251, 251),
-                inset 0 -4px 4px rgb(255, 255, 255);
-}
 
 
 /* ========== BAGIAN PENDIDIKAN ========== */
@@ -210,7 +166,7 @@ section {
   font-size: 13px;
   font-weight: 13px;
   border-radius: 20px;
-  border-right: 10px;
+  /* border-right: 10px; */
   transition: background .5s, transform .5s;
   box-shadow: 1px 1px 20px var(--warna1), 1px 1px 30px var(--warna2);
 }
@@ -247,8 +203,8 @@ section {
   padding-top: 10px;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10vh;
+  /* padding-right: 30px; */
   padding-bottom: 50px;
 }
 
@@ -266,7 +222,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, minmax(30px, auto));
   gap: 10px;
-  margin: 30px 30px;
+  margin: 50px auto;
 }
 
 .baris {
@@ -468,15 +424,14 @@ footer {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, 600px));
-    grid-gap: 40px;
   } 
 }
 
 @media (width < 960px) {
   .konten_projek {
     display: grid;
-    grid-template-columns: repeat(1, minmax(30px, auto));
+    grid-template-columns: repeat(1, minmax(100%, auto));
     gap: 10px;
-    margin: 30px 30px;
+    /* margin: 30px 30px; */
   }
 }
